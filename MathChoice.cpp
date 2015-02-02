@@ -53,12 +53,18 @@ int main()
 			}
 			for (int i = 1; i <= nVar; i++)
 			{
-				choice1 += (1.0 / nVar);
+				choice1 += (1.0 / i);
 			}
+			cout << choice1 << endl;
+
+		}
+		else if(userSelect ==2)
+		{
 
 		}
 
-		cout << choice1 << endl;
+
+
 
 	}
 
