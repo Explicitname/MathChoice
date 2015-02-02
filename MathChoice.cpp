@@ -14,14 +14,15 @@ using namespace std;
 int main()
 
 {
-	int userSelect = 0;
-	int nVar = 0;
-	int xVar = 0;
-	double choice1 = 0;
 	string cont = "Yes";
 
 	while (cont == "Yes" or cont == "yes")
 	{
+		int userSelect = 0;
+		int nVar = 0;
+		int xVar = 0;
+		double choice1 = 0;
+		double choice3 = 0;
 
 		cout << "Please choose which one of the following series to compute:"
 				<< endl << endl;
@@ -55,12 +56,39 @@ int main()
 			{
 				choice1 += (1.0 / i);
 			}
-			cout << choice1 << endl;
+			cout << "The result of the computations are: " << choice1 << endl << endl;
+			cout << "Would you like to compute another series? Enter 'Yes' to continue: ";
+			cin >> cont;
 
 		}
-		else if(userSelect ==2)
+		else if(userSelect == 2)
 		{
+			cout << "Please enter the integer to use as the 'n' variable: ";
+			cin >> nVar;
+			cout << "Please enter the integer to use as the 'x' variable: ";
+			cin >> xVar;
+			for (int i = 1; i <= nVar; i++)
+			{
+				xVar *= 2;
+			}
+			cout << "The result of the computations are: " << xVar << endl << endl;
+			cout << "Would you like to compute another series? Enter 'Yes' to continue: ";
+			cin >> cont;
 
+		}
+		else if(userSelect == 3)
+		{
+			cout << "Please enter the integer to use as the 'n' variable: ";
+			cin >> nVar;
+			cout << "Please enter the integer to use as the 'x' variable: ";
+			cin >> xVar;
+			for (int i = 1; i <= nVar; i++)
+			{
+			choice3 += (xVar * i);
+			}
+			cout << "The result of the computations are: " << choice3 << endl << endl;
+			cout << "Would you like to compute another series? Enter 'Yes' to continue: ";
+			cin >> cont;
 		}
 
 
